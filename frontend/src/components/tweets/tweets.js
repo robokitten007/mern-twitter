@@ -10,10 +10,10 @@ class Tweet extends React.Component {
       tweets: []
     }
   }
-
-  componentWillMount() {
+    componentDidMount() {
+  // componentWillMount() {
     this.props.fetchTweets();
-  }
+  } 
 
   componentWillReceiveProps(newState) {
     this.setState({ tweets: newState.tweets });
@@ -27,7 +27,7 @@ class Tweet extends React.Component {
         <div>
           <h2>All Tweets</h2>
           {this.state.tweets.map(tweet => (
-            <TweetBox key={tweet._id} text={tweet.text} />
+            <TweetBox key={tweet.id} text={tweet.text} />
           ))}
         </div>
       );
@@ -36,3 +36,5 @@ class Tweet extends React.Component {
 }
 
 export default withRouter(Tweet);
+
+// export default Tweet

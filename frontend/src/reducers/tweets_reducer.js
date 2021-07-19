@@ -5,14 +5,17 @@ import { RECEIVE_TWEETS, RECEIVE_USER_TWEETS, RECEIVE_NEW_TWEET } from '../actio
     let newState = Object.assign({}, state);
     switch(action.type) {
       case RECEIVE_TWEETS:
-        newState.all = action.tweets.data;
-        return newState;
+        // newState.all = action.tweets.data;
+        // return newState;
+        return action.tweets.data;
       case RECEIVE_USER_TWEETS:
-        newState.user = action.tweets.data;
-        return newState;
+        // newState.user = action.tweets.data;
+        // return newState;
+        return action.tweets.data;
       case RECEIVE_NEW_TWEET:
         newState.new = action.tweet.data
         return newState;
+        // return action.tweet.data
       default:
         return state;
     }

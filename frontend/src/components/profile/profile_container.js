@@ -5,7 +5,8 @@ import Profile from './profile';
 
 const mapStateToProps = (state) => {
   return {
-    tweets: Object.values(state.tweets.user),
+    // tweets: Object.values(state.tweets.user),
+    tweets: Object.values(state.tweets),
     currentUser: state.session.user
   };
 };

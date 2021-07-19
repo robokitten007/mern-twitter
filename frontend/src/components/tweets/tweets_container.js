@@ -1,10 +1,11 @@
 import { connect } from 'react-redux';
 import { fetchTweets } from '../../action/tweet_actions';
 import Tweets from './tweets';
+// import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = (state) => {
   return {
-    tweets: Object.values(state.tweets.all)
+    tweets: Object.values(state.tweets)
   };
 };
 

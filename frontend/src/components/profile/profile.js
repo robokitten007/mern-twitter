@@ -9,8 +9,8 @@ class Profile extends React.Component {
             tweets: []
         }
     }
-    
-    componentWillMount() {
+      componentDidMount(){
+    // componentWillMount() {
         console.log(this.props.currentUser.id)
         this.props.fetchUserTweets(this.props.currentUser.id);
     }
